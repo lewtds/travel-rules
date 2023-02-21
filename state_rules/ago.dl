@@ -1,1 +1,91 @@
 #include "../decl.dl"
+
+// https://en.wikipedia.org/wiki/Visa_policy_of_Angola
+
+can_visit_state(p, "AGO", "visa exemption", "indefinite stay", "") :-
+    person_holds_passport(p, "NAM", _).
+
+can_visit_state(p, "AGO", "visa exemption", "30 days", "three visa-free entries per year") :-
+    person_holds_passport(p, "BWA", _);
+    person_holds_passport(p, "CPV", _);
+    person_holds_passport(p, "MOZ", _);
+    person_holds_passport(p, "MUS", _);
+    person_holds_passport(p, "RWA", _);
+    person_holds_passport(p, "SGP", _);
+    person_holds_passport(p, "SYC", _);
+    person_holds_passport(p, "ZAF", _);
+    person_holds_passport(p, "ZMB", _);
+    person_holds_passport(p, "ZWE", _).
+
+can_visit_state(p, "AGO", "diplomatic passports", "?", "") :-
+    person_holds_passport(p, "ESP", "diplomatic passport").
+
+can_visit_state(p, "AGO", "diplomatic and official passports", "?", "") :-
+    (
+        person_holds_passport(p, "ARG", passport_type);
+        person_holds_passport(p, "BRA", passport_type);
+        person_holds_passport(p, "CHE", passport_type);
+        person_holds_passport(p, "CHN", passport_type);
+        person_holds_passport(p, "COD", passport_type);
+        person_holds_passport(p, "CPV", passport_type);
+        person_holds_passport(p, "CUB", passport_type);
+        person_holds_passport(p, "DZA", passport_type);
+        person_holds_passport(p, "EGY", passport_type);
+        person_holds_passport(p, "FRA", passport_type);
+        person_holds_passport(p, "GNB", passport_type);
+        person_holds_passport(p, "IDN", passport_type);
+        person_holds_passport(p, "ITA", passport_type);
+        person_holds_passport(p, "KOR", passport_type);
+        person_holds_passport(p, "MOZ", passport_type);
+        person_holds_passport(p, "PRT", passport_type);
+        person_holds_passport(p, "RUS", passport_type);
+        person_holds_passport(p, "STP", passport_type);
+        person_holds_passport(p, "VEN", passport_type);
+        person_holds_passport(p, "VNM", passport_type);
+        person_holds_passport(p, "ZAF", passport_type);
+        person_holds_passport(p, "ZMB", passport_type)
+    ),
+    (
+        passport_type = "diplomatic passport";
+        passport_type = "service passport"
+    ).
+
+can_visit_state(p, "AGO", "Simplified visa issuance", "30 days", "visa on arrival") :-
+    (
+        person_holds_passport(p, state, _),
+        eu_state(state)
+    );
+    person_holds_passport(p, "ARE", _);
+    person_holds_passport(p, "ARG", _);
+    person_holds_passport(p, "AUS", _);
+    person_holds_passport(p, "BRA", _);
+    person_holds_passport(p, "CAN", _);
+    person_holds_passport(p, "CHE", _);
+    person_holds_passport(p, "CHL", _);
+    person_holds_passport(p, "CHN", _);
+    person_holds_passport(p, "CUB", _);
+    person_holds_passport(p, "DZA", _);
+    person_holds_passport(p, "GBR", _);
+    person_holds_passport(p, "GNB", _);
+    person_holds_passport(p, "GNQ", _);
+    person_holds_passport(p, "IDN", _);
+    person_holds_passport(p, "IND", _);
+    person_holds_passport(p, "ISL", _);
+    person_holds_passport(p, "ISR", _);
+    person_holds_passport(p, "JPN", _);
+    person_holds_passport(p, "KOR", _);
+    person_holds_passport(p, "LSO", _);
+    person_holds_passport(p, "MAR", _);
+    person_holds_passport(p, "MCO", _);
+    person_holds_passport(p, "MDG", _);
+    person_holds_passport(p, "MWI", _);
+    person_holds_passport(p, "NOR", _);
+    person_holds_passport(p, "NZL", _);
+    person_holds_passport(p, "RUS", _);
+    person_holds_passport(p, "STP", _);
+    person_holds_passport(p, "SWZ", _);
+    person_holds_passport(p, "TLS", _);
+    person_holds_passport(p, "URY", _);
+    person_holds_passport(p, "USA", _);
+    person_holds_passport(p, "VAT", _);
+    person_holds_passport(p, "VEN", _).
