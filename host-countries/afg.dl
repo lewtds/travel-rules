@@ -1,0 +1,4 @@
+#include "../decl.dl"
+
+can_visit_state(p, "AFG", "visa exemption", "?", "humanitarian and tourism") :-
+    person_holds_passport(p, _, _).

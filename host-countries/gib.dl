@@ -1,0 +1,11 @@
+#include "../decl.dl"
+
+can_visit_state(p, "GIB", "has_schengen_visa", "21 days", "visa valid min 7 days after entering") :-
+    person_holds_schengen_visa(p, _),
+    (
+        person_holds_passport(p, "CHN", _);
+        person_holds_passport(p, "IND", _);
+        person_holds_passport(p, "MNG", _);
+        person_holds_passport(p, "MAR", _);
+        person_holds_passport(p, "RUS", _)
+    ).

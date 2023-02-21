@@ -1,0 +1,4 @@
+#include "../decl.dl"
+
+can_visit_state(p, "SSD", "eVisa", "?", "eVisa") :-
+    person_holds_passport(p, "VNM", _).

@@ -1,0 +1,16 @@
+#include "../decl.dl"
+
+can_visit_state(p, "COL", "has_schengen_visa", "90/180", "") :-
+	person_holds_schengen_visa(p, _),
+	(
+		person_holds_passport(p, "CHN", _);
+		person_holds_passport(p, "IND", _);
+		person_holds_passport(p, "KHM", _);
+		person_holds_passport(p, "MMR", _);
+		person_holds_passport(p, "THA", _);
+		person_holds_passport(p, "VNM", _)
+	).
+
+can_visit_state(p, "COL", "has_schengen_visa", "180 days", "") :-
+	person_holds_schengen_visa(p, _),
+	person_holds_passport(p, "MAC", _).

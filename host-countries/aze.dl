@@ -1,0 +1,4 @@
+#include "../decl.dl"
+
+can_visit_state(p, "AZE", "eVisa", "30 days", "eVisa") :-
+    person_holds_passport(p, "VNM", _).

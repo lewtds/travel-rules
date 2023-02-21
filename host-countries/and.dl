@@ -1,0 +1,12 @@
+#include "../decl.dl"
+can_visit_state(p, "AND", "through France", duration, conditions) :-
+    can_visit_state(p, "FRA", _, duration, conditions).
+
+can_visit_state(p, "AND", "through Spain", duration, conditions) :-
+    can_visit_state(p, "ESP", _, duration, conditions).
+
+can_visit_state(p, "AND", "through France", duration, conditions) :-
+    can_visit_state(p, "FRA", _, duration, conditions).
+
+can_visit_state(p, "AND", "through Spain", duration, conditions) :-
+    can_visit_state(p, "ESP", _, duration, conditions).

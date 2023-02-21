@@ -1,0 +1,7 @@
+#include "../decl.dl"
+
+can_visit_state(p, "CYP", "has_schengen_visa", "visa duration", "") :-
+    person_holds_schengen_visa(p, _).
+
+can_visit_state(p, "CYP", "has_schengen_visa", "visa duration", "") :-
+    person_holds_schengen_visa(p, _).

@@ -1,0 +1,23 @@
+#include "../decl.dl"
+
+can_visit_state(p, "TUR", "has_schengen_visa", "1 month", "eVisa") :-
+    person_holds_schengen_visa(p, _).
+
+//Afghanistan	Ethiopia	Niger
+//Angola	Gabon	North Korea
+//Bangladesh	Gambia	Pakistan
+//Benin	Ghana	Philippines
+//Botswana	Guinea	Republic of Congo
+//Burkina Faso	Guinea-Bissau	Rwanda
+//Burundi	India	Sao Tome and Principe
+//Cameroon	Iraq	Senegal
+//Cape Verde	Kenya	Sierra Leone
+//Central African Republic	Lesotho	Somalia
+//Chad	Liberia	Sudan
+//Comoros	Libya	Swaziland
+//Cote d’Ivoire	Madagascar	Tanzania
+//Democratic Republic of Congo	Malawi	Togo
+//Djibouti	Mali	Uganda
+//Egypt	Mauritania	Vietnam
+//Equatorial Guinea	Mozambique	Yemen
+//Eritrea	Nepal	Zimbabwe
