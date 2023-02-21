@@ -11,3 +11,4 @@ output/can_visit_state_formatted.csv: facts/*
 
 clean:
 	-rm output/*.csv
+	-rm output/*.d
