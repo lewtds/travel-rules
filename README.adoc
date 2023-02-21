@@ -1,3 +1,24 @@
 = Travel Rules Database
 
 Travel rules around the world as an executable Datalog database.
+
+The travel rules for each nation state is specified in its own Datalog file in the `./host-countries` folder in the 3 letter ISO3166 1 alpha 3 format. Preferably each rule should have a referenced source that could be checked regularly for updates.
+
+An example session:
+
+- Fill in your personal travel information, including passports, visas and/or residence permits you hold (see the sample files in the `./facts` folder)
+- `make`
+- See `output/can_visit_state_formatted.csv`. An excerpt is included here:
+
+[%header,format=tsv]
+|===
+person	state_name	basis	duration	conditions
+trung	Afghanistan	visa exemption	?	humanitarian and tourism
+trung	Albania	has_schengen_visa	90	-
+trung	Andorra	through France	visa duration	-
+trung	Andorra	through Spain	visa duration	-
+trung	Armenia	eVisa	?	eVisa
+trung	Antigua and Barbuda	has_schengen_visa	30 days	visa on arrival
+trung	Antigua and Barbuda	eVisa	?	eVisa
+trung	Austria	has_schengen_visa	visa duration
+|===
