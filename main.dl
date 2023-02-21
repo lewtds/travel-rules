@@ -13,4 +13,6 @@ can_visit_state(p, s, "has_schengen_visa", "visa duration", "") :-
     person_holds_schengen_visa(p, another_schengen_state),
     s != another_schengen_state.
 
-.output can_visit_state
+.input person_holds_passport
+.input person_holds_visa
+.output can_visit_state(headers=true)

@@ -5,11 +5,7 @@
 .type PassportType <: symbol
 .type Person <: symbol
 
-.decl can_visit_state(p: Person, state: ISO3166_1_alpha_3, basis: symbol, duration: symbol, conditions: symbol)
-
-.decl person_holds_visa(p: Person, state: ISO3166_1_alpha_3, visa_type: VisaType)
-.decl person_holds_passport(p: Person, state: ISO3166_1_alpha_3, passport_type: PassportType)
-.decl person_holds_schengen_visa(p: Person, state: ISO3166_1_alpha_3)
-
-.input person_holds_passport
-.input person_holds_visa
+.decl can_visit_state(person: Person, state: ISO3166_1_alpha_3, basis: symbol, duration: symbol, conditions: symbol)
+.decl person_holds_visa(person: Person, state: ISO3166_1_alpha_3, visa_type: VisaType)
+.decl person_holds_passport(person: Person, state: ISO3166_1_alpha_3, passport_type: PassportType)
+.decl person_holds_schengen_visa(person: Person, state: ISO3166_1_alpha_3)
