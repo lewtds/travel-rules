@@ -21,12 +21,12 @@ to_convert("Ukraine").
 to_convert("Uzbekistan").
 to_convert("Venezuela (Bolivarian Republic of)").
 
-.decl country_name_to_iso(x: symbol)
-.output country_name_to_iso
+.decl country_name_to_iso(x: symbol) output
 country_name_to_iso(x) :-
     to_convert(e),
     state(e, x).
 
-//country_name_to_iso(e) :-
-//    to_convert(e),
-//    !state(e, _).
+.decl missing_country_name_to_iso(x: symbol) output
+missing_country_name_to_iso(e) :-
+    to_convert(e),
+    !state(e, _).
