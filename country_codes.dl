@@ -311,35 +311,3 @@ eu_state("ROU").
 eu_state("SVK").
 eu_state("SVN").
 eu_state("SWE").
-
-.decl to_reverse(x: symbol)
-
-to_reverse("Albania").
-to_reverse("Armenia").
-to_reverse("Azerbaijan").
-to_reverse("Belarus").
-to_reverse("Cuba").
-to_reverse("Georgia").
-to_reverse("Kazakhstan").
-to_reverse("Kyrgyzstan").
-to_reverse("Mexico").
-to_reverse("Moldova, Republic of").
-to_reverse("Nicaragua").
-to_reverse("Peru").
-to_reverse("Tajikistan").
-to_reverse("Timor-Leste").
-to_reverse("Turkmenistan").
-to_reverse("Ukraine").
-to_reverse("Uzbekistan").
-to_reverse("Venezuela (Bolivarian Republic of)").
-
-
-.decl reverse(x: symbol)
-.output reverse
-reverse(x) :-
-    to_reverse(e),
-    state(e, x).
-
-//reverse(e) :-
-//    to_reverse(e),
-//    !state(e, _).
