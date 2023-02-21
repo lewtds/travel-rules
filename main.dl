@@ -1,5 +1,5 @@
 #include "decl.dl"
-#include "host_countries_imports.dl"
+#include "state_rules.dl"
 
 person_holds_schengen_visa(p, s) :-
     person_holds_visa(p, s, _),
