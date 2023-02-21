@@ -1,1 +1,157 @@
 #include "../decl.dl"
+
+// https://www.netherlandsworldwide.nl/caribbean-visa
+
+can_visit_state(p, state, "visa exemption", "?", "") :-
+    kingdom_of_the_netherlands_caribbean_state(state),
+    (
+        person_holds_passport(p, "ALB", _);
+        person_holds_passport(p, "AND", _);
+        person_holds_passport(p, "ARE", _);
+        person_holds_passport(p, "ARG", _);
+        person_holds_passport(p, "ATG", _);
+        person_holds_passport(p, "AUS", _);
+        person_holds_passport(p, "AUT", _);
+        person_holds_passport(p, "BEL", _);
+        person_holds_passport(p, "BGR", _);
+        person_holds_passport(p, "BHS", _);
+        person_holds_passport(p, "BIH", _);
+        person_holds_passport(p, "BLZ", _);
+        person_holds_passport(p, "BRA", _);
+        person_holds_passport(p, "BRB", _);
+        person_holds_passport(p, "BRN", _);
+        person_holds_passport(p, "CAN", _);
+        person_holds_passport(p, "CHE", _);
+        person_holds_passport(p, "CHL", _);
+        person_holds_passport(p, "COL", _);
+        person_holds_passport(p, "CRI", _);
+        person_holds_passport(p, "CYP", _);
+        person_holds_passport(p, "CZE", _);
+        person_holds_passport(p, "DEU", _);
+        person_holds_passport(p, "DMA", _);
+        person_holds_passport(p, "DNK", _);
+        person_holds_passport(p, "ECU", _);
+        person_holds_passport(p, "ESP", _);
+        person_holds_passport(p, "EST", _);
+        person_holds_passport(p, "FIN", _);
+        person_holds_passport(p, "FRA", _);
+        person_holds_passport(p, "GBR", _);
+        person_holds_passport(p, "GRC", _);
+        person_holds_passport(p, "GRD", _);
+        person_holds_passport(p, "GTM", _);
+        person_holds_passport(p, "HND", _);
+        person_holds_passport(p, "HRV", _);
+        person_holds_passport(p, "HUN", _);
+        person_holds_passport(p, "IRL", _);
+        person_holds_passport(p, "ISL", _);
+        person_holds_passport(p, "ISR", _);
+        person_holds_passport(p, "ITA", _);
+        person_holds_passport(p, "JPN", _);
+        person_holds_passport(p, "KNA", _);
+        person_holds_passport(p, "KOR", _);
+        person_holds_passport(p, "LCA", _);
+        person_holds_passport(p, "LIE", _);
+        person_holds_passport(p, "LTU", _);
+        person_holds_passport(p, "LUX", _);
+        person_holds_passport(p, "LVA", _);
+        person_holds_passport(p, "MCO", _);
+        person_holds_passport(p, "MDA", _);
+        person_holds_passport(p, "MEX", _);
+        person_holds_passport(p, "MKD", _);
+        person_holds_passport(p, "MLT", _);
+        person_holds_passport(p, "MNE", _);
+        person_holds_passport(p, "MUS", _);
+        person_holds_passport(p, "MYS", _);
+        person_holds_passport(p, "NIC", _);
+        person_holds_passport(p, "NOR", _);
+        person_holds_passport(p, "NZL", _);
+        person_holds_passport(p, "PAN", _);
+        person_holds_passport(p, "PER", _);
+        person_holds_passport(p, "POL", _);
+        person_holds_passport(p, "PRT", _);
+        person_holds_passport(p, "PRY", _);
+        person_holds_passport(p, "ROU", _);
+        person_holds_passport(p, "SGP", _);
+        person_holds_passport(p, "SLV", _);
+        person_holds_passport(p, "SMR", _);
+        person_holds_passport(p, "SRB", _);
+        person_holds_passport(p, "SUR", _);
+        person_holds_passport(p, "SVK", _);
+        person_holds_passport(p, "SVN", _);
+        person_holds_passport(p, "SWE", _);
+        person_holds_passport(p, "SYC", _);
+        person_holds_passport(p, "TTO", _);
+        person_holds_passport(p, "URY", _);
+        person_holds_passport(p, "USA", _);
+        person_holds_passport(p, "VAT", _);
+        person_holds_passport(p, "VCT", _)
+    ).
+
+can_visit_state(p, state, "holders of British National Overseas passport", "?", "") :-
+    kingdom_of_the_netherlands_caribbean_state(state),
+    person_holds_passport(p, "HKG", "British National Overseas passport").
+
+can_visit_state(p, state, "holders of Special Administrative Region passport", "?", "") :-
+    kingdom_of_the_netherlands_caribbean_state(state),
+    person_holds_passport(p, "HKG", "Special Administrative Region passport").
+
+can_visit_state(p, state, "holders of Special Administrative Region passport", "?", "") :-
+    kingdom_of_the_netherlands_caribbean_state(state),
+    person_holds_passport(p, "MAC", "Special Administrative Region passport").
+
+can_visit_state(p, state, "visa exemption", "?", "holders of a passport bearing their identity card number") :-
+    kingdom_of_the_netherlands_caribbean_state(state),
+    person_holds_passport(p, "TWN", _).
+
+can_visit_state(p, state, "visa exemption", "?", "holders of a biometric passport") :-
+    kingdom_of_the_netherlands_caribbean_state(state),
+    person_holds_passport(p, "UKR", _).
+
+can_visit_state(p, "CUW", "visa exemption", "?", "") :-
+    person_holds_passport(p, "JAM", _).
+
+can_visit_state(p, state, "visa exemption", "?", "") :-
+    kingdom_of_the_netherlands_caribbean_state(state),
+    state != "SXM",
+    person_holds_passport(p, "GUY", _).
+
+can_visit_state(p, state, "has Schengen visa", "?", "") :-
+    kingdom_of_the_netherlands_caribbean_state(state),
+    person_holds_schengen_visa(p, _).
+
+can_visit_state(p, state, "cruise ship", "48 hours", "") :-
+    person_holds_passport(p, _, _),
+    kingdom_of_the_netherlands_caribbean_state(state),
+    state != "ABW".
+
+can_visit_state(p, "ABW", "cruise ship", "24 hours", "") :-
+    person_holds_passport(p, _, _).
+
+// TODO Overseas France
+//If you hold a valid residence permit for (French) Guiana, Guadeloupe, Martinique, Mayotte, Réunion, Saint Barthélemy or Saint Martin, you do not require a visa.
+
+// TODO MAF
+//St Maarten
+//If you hold a residence permit or proof of return for Saint Martin (the French part of the island), you do not need a visa to enter St Maarten (the Dutch part of the island).
+//
+//If you hold a visa for Saint Martin, you do not need a visa to enter St Maarten. However, you do need a visa for the other Caribbean parts of the Kingdom.
+
+//St Maarten – travelling overland
+//If you are travelling overland to Saint Martin (the French part of the island) from St Maarten, you do not need a visa for the time you spend in the Dutch part. You must, however, provide proof of a confirmed hotel reservation. You must also hold a valid visa issued by the French authorities (if you are required to have one). You do need a visa for the other Caribbean parts of the Kingdom, however.
+
+// TODO UK
+//If you hold a multiple-entry visa or residence permit for the United Kingdom or Ireland you do not need a visa.
+
+// TODO US CAN
+//
+//If you hold a residence permit for the United States or Canada, you do not need a visa.
+//If you hold a multiple-entry visa for the United States or Canada and are a national of 1 of the countries in the table below, you do not need a visa.
+
+// TODO air and sea crew
+//You are a crew member on a civilian aircraft and your stay lasts no more than 48 hours.
+//You are a crew member on a civilian ship in accordance with the Convention on Facilitation of International Maritime Traffic (signed in London on 9 April 1965), and your stay in port lasts no more than 48 hours. In addition, you meet the requirements set out by the International Maritime Organization (IMO).
+//You are a seaman who holds a seaman's book and a passport (your stay lasts no more than 48 hours, in Aruba your stay lasts no more than 24 hours)
+
+// TODO You hold a special travel document
+
+// TODO You have proof of return, a return visa or a residence permit issued by one of the Caribbean parts of the Kingdom

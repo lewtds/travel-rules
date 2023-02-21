@@ -5,6 +5,8 @@
 .decl state_iso3_name(iso: ISO3166_1_alpha_3, name: symbol)
 .decl eu_state(name: ISO3166_1_alpha_3)
 .decl schengen_state(iso: ISO3166_1_alpha_3)
+.decl kingdom_of_the_netherlands_state(iso: ISO3166_1_alpha_3)
+.decl kingdom_of_the_netherlands_caribbean_state(iso: ISO3166_1_alpha_3)
 
 state_iso3_name("ABW", "Aruba").
 state_iso3_name("AFG", "Afghanistan").
@@ -257,6 +259,7 @@ state_iso3_name("YEM", "Yemen").
 state_iso3_name("ZAF", "South Africa").
 state_iso3_name("ZMB", "Zambia").
 state_iso3_name("ZWE", "Zimbabwe").
+state_iso3_name("VAT", "Holy See (the)").
 
 schengen_state("AUT").
 schengen_state("BEL").
@@ -313,3 +316,14 @@ eu_state("ROU").
 eu_state("SVK").
 eu_state("SVN").
 eu_state("SWE").
+
+kingdom_of_the_netherlands_state("ABW").
+kingdom_of_the_netherlands_state("NLD").
+kingdom_of_the_netherlands_state("BES").
+kingdom_of_the_netherlands_state("SXM").
+kingdom_of_the_netherlands_state("CUW").
+
+kingdom_of_the_netherlands_caribbean_state("ABW").
+kingdom_of_the_netherlands_caribbean_state("BES").
+kingdom_of_the_netherlands_caribbean_state("SXM").
+kingdom_of_the_netherlands_caribbean_state("CUW").
