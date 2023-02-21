@@ -1,32 +1,17 @@
 #include "../country_codes.dl"
 
-.decl to_convert(x: symbol)
+.input to_convert
+.output country_name_to_iso
+.output missing_country_name_to_iso
 
-to_convert("Albania").
-to_convert("Armenia").
-to_convert("Azerbaijan").
-to_convert("Belarus").
-to_convert("Cuba").
-to_convert("Georgia").
-to_convert("Kazakhstan").
-to_convert("Kyrgyzstan").
-to_convert("Mexico").
-to_convert("Moldova, Republic of").
-to_convert("Nicaragua").
-to_convert("Peru").
-to_convert("Tajikistan").
-to_convert("Timor-Leste").
-to_convert("Turkmenistan").
-to_convert("Ukraine").
-to_convert("Uzbekistan").
-to_convert("Venezuela (Bolivarian Republic of)").
+.decl to_convert(state_name: symbol)
 
-.decl country_name_to_iso(x: symbol) output
-country_name_to_iso(x) :-
-    to_convert(e),
-    state(e, x).
+.decl country_name_to_iso(iso: symbol)
+country_name_to_iso(iso) :-
+    to_convert(name),
+    state_iso3_name(iso, name).
 
-.decl missing_country_name_to_iso(x: symbol) output
-missing_country_name_to_iso(e) :-
-    to_convert(e),
-    !state(e, _).
+.decl missing_country_name_to_iso(name: symbol)
+missing_country_name_to_iso(name) :-
+    to_convert(name),
+    !state_iso3_name(_, name).
