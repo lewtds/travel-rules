@@ -1,0 +1,12 @@
+#include "../decl.dl"
+
+can_visit_state(p, "MMR", "visa exemption", "30 days", "if entering and departing from Yangon, Mandalay, or Naypyidaw International Airports") :-
+    person_holds_passport(p, "VNM", _).
+
+can_visit_state(p, "MMR", "visa exemption", "14 days", "if entering and departing from Yangon, Mandalay, or Naypyidaw International Airports") :-
+    person_holds_passport(p, "BRN", _);
+    person_holds_passport(p, "KHM", _);
+    person_holds_passport(p, "IDN", _);
+    person_holds_passport(p, "LAO", _);
+    person_holds_passport(p, "PHL", _);
+    person_holds_passport(p, "THA", _).

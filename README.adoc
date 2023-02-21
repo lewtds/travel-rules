@@ -1,0 +1,3 @@
+= Travel Rules Database
+
+Travel rules around the world as an executable Datalog database.

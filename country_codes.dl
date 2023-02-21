@@ -1,0 +1,345 @@
+#pragma once
+.type ISO3166_1_alpha_3 <: symbol
+.decl state(name: symbol, iso: ISO3166_1_alpha_3)
+.decl eu_state(name: ISO3166_1_alpha_3)
+.decl schengen_state(iso: ISO3166_1_alpha_3)
+
+state("Aruba", "ABW").
+state("Afghanistan", "AFG").
+state("Angola", "AGO").
+state("Anguilla", "AIA").
+state("Åland Islands", "ALA").
+state("Albania", "ALB").
+state("Andorra", "AND").
+state("United Arab Emirates", "ARE").
+state("Argentina", "ARG").
+state("Armenia", "ARM").
+state("American Samoa", "ASM").
+state("Antarctica", "ATA").
+state("French Southern Territories", "ATF").
+state("Antigua and Barbuda", "ATG").
+state("Australia", "AUS").
+state("Austria", "AUT").
+state("Azerbaijan", "AZE").
+state("Burundi", "BDI").
+state("Belgium", "BEL").
+state("Benin", "BEN").
+state("Bonaire, Sint Eustatius and Saba", "BES").
+state("Burkina Faso", "BFA").
+state("Bangladesh", "BGD").
+state("Bulgaria", "BGR").
+state("Bahrain", "BHR").
+state("Bahamas", "BHS").
+state("Bosnia and Herzegovina", "BIH").
+state("Saint Barthélemy", "BLM").
+state("Belarus", "BLR").
+state("Belize", "BLZ").
+state("Bermuda", "BMU").
+state("Bolivia (Plurinational State of)", "BOL").
+state("Brazil", "BRA").
+state("Barbados", "BRB").
+state("Brunei Darussalam", "BRN").
+state("Bhutan", "BTN").
+state("Bouvet Island", "BVT").
+state("Botswana", "BWA").
+state("Central African Republic", "CAF").
+state("Canada", "CAN").
+state("Cocos (Keeling) Islands", "CCK").
+state("Switzerland", "CHE").
+state("Chile", "CHL").
+state("China", "CHN").
+state("Côte d'Ivoire", "CIV").
+state("Cameroon", "CMR").
+state("Congo, Democratic Republic of the", "COD").
+state("Congo", "COG").
+state("Cook Islands", "COK").
+state("Colombia", "COL").
+state("Comoros", "COM").
+state("Cabo Verde", "CPV").
+state("Costa Rica", "CRI").
+state("Cuba", "CUB").
+state("Curaçao", "CUW").
+state("Christmas Island", "CXR").
+state("Cayman Islands", "CYM").
+state("Cyprus", "CYP").
+state("Czech Republic", "CZE").
+state("Germany", "DEU").
+state("Djibouti", "DJI").
+state("Dominica", "DMA").
+state("Denmark", "DNK").
+state("Dominican Republic", "DOM").
+state("Algeria", "DZA").
+state("Ecuador", "ECU").
+state("Egypt", "EGY").
+state("Eritrea", "ERI").
+state("Western Sahara", "ESH").
+state("Spain", "ESP").
+state("Estonia", "EST").
+state("Ethiopia", "ETH").
+state("Finland", "FIN").
+state("Fiji", "FJI").
+state("Falkland Islands (Malvinas)", "FLK").
+state("France", "FRA").
+state("Faroe Islands", "FRO").
+state("Micronesia (Federated States of)", "FSM").
+state("Gabon", "GAB").
+state("United Kingdom of Great Britain and Northern Ireland", "GBR").
+state("Georgia", "GEO").
+state("Guernsey", "GGY").
+state("Ghana", "GHA").
+
+state("Gibraltar", "GIB").
+state("Guinea", "GIN").
+state("Guadeloupe", "GLP").
+state("Gambia", "GMB").
+state("Guinea-Bissau", "GNB").
+state("Equatorial Guinea", "GNQ").
+state("Greece", "GRC").
+state("Grenada", "GRD").
+state("Greenland", "GRL").
+state("Guatemala", "GTM").
+state("French Guiana", "GUF").
+state("Guam", "GUM").
+state("Guyana", "GUY").
+state("Hong Kong", "HKG").
+state("Heard Island and McDonald Islands", "HMD").
+state("Honduras", "HND").
+state("Croatia", "HRV").
+state("Haiti", "HTI").
+state("Hungary", "HUN").
+state("Indonesia", "IDN").
+state("Isle of Man", "IMN").
+state("India", "IND").
+state("British Indian Ocean Territory", "IOT").
+state("Ireland", "IRL").
+state("Iran (Islamic Republic of)", "IRN").
+state("Iraq", "IRQ").
+state("Iceland", "ISL").
+state("Israel", "ISR").
+state("Italy", "ITA").
+state("Jamaica", "JAM").
+state("Jersey", "JEY").
+state("Jordan", "JOR").
+state("Japan", "JPN").
+state("Kazakhstan", "KAZ").
+state("Kenya", "KEN").
+state("Kyrgyzstan", "KGZ").
+state("Cambodia", "KHM").
+state("Kiribati", "KIR").
+state("Saint Kitts and Nevis", "KNA").
+state("Korea, Republic of", "KOR").
+state("Kuwait", "KWT").
+state("Lao People's Democratic Republic", "LAO").
+state("Lebanon", "LBN").
+state("Liberia", "LBR").
+state("Libya", "LBY").
+state("Saint Lucia", "LCA").
+state("Liechtenstein", "LIE").
+state("Sri Lanka", "LKA").
+state("Lesotho", "LSO").
+state("Lithuania", "LTU").
+state("Luxembourg", "LUX").
+state("Latvia", "LVA").
+state("Macao", "MAC").
+state("Saint Martin (French part)", "MAF").
+state("Morocco", "MAR").
+state("Monaco", "MCO").
+state("Moldova, Republic of", "MDA").
+state("Madagascar", "MDG").
+state("Maldives", "MDV").
+state("Mexico", "MEX").
+state("Marshall Islands", "MHL").
+state("North Macedonia", "MKD").
+state("Mali", "MLI").
+state("Malta", "MLT").
+state("Myanmar", "MMR").
+state("Montenegro", "MNE").
+state("Mongolia", "MNG").
+state("Northern Mariana Islands", "MNP").
+state("Mozambique", "MOZ").
+state("Mauritania", "MRT").
+state("Montserrat", "MSR").
+state("Martinique", "MTQ").
+state("Mauritius", "MUS").
+state("Malawi", "MWI").
+state("Malaysia", "MYS").
+state("Mayotte", "MYT").
+state("Namibia", "NAM").
+state("New Caledonia", "NCL").
+state("Niger", "NER").
+state("Norfolk Island", "NFK").
+state("Nigeria", "NGA").
+state("Nicaragua", "NIC").
+state("Niue", "NIU").
+state("Netherlands", "NLD").
+
+state("Norway", "NOR").
+state("Nepal", "NPL").
+state("Nauru", "NRU").
+state("New Zealand", "NZL").
+state("Oman", "OMN").
+state("Pakistan", "PAK").
+state("Panama", "PAN").
+state("Pitcairn", "PCN").
+state("Peru", "PER").
+state("Philippines", "PHL").
+state("Palau", "PLW").
+state("Papua New Guinea", "PNG").
+state("Poland", "POL").
+state("Puerto Rico", "PRI").
+state("Korea (Democratic People's Republic of)", "PRK").
+state("Portugal", "PRT").
+state("Paraguay", "PRY").
+state("Palestine, State of", "PSE").
+state("French Polynesia", "PYF").
+state("Qatar", "QAT").
+state("Réunion", "REU").
+state("Romania", "ROU").
+state("Russian Federation", "RUS").
+state("Rwanda", "RWA").
+state("Saudi Arabia", "SAU").
+state("Sudan", "SDN").
+state("Senegal", "SEN").
+state("Singapore", "SGP").
+state("South Georgia and the South Sandwich Islands", "SGS").
+state("Saint Helena, Ascension and Tristan da Cunha", "SHN").
+state("Svalbard and Jan Mayen", "SJM").
+state("Solomon Islands", "SLB").
+state("Sierra Leone", "SLE").
+state("El Salvador", "SLV").
+state("San Marino", "SMR").
+state("Somalia", "SOM").
+state("Saint Pierre and Miquelon", "SPM").
+state("Serbia", "SRB").
+state("South Sudan", "SSD").
+state("Sao Tome and Principe", "STP").
+state("Suriname", "SUR").
+state("Slovakia", "SVK").
+state("Slovenia", "SVN").
+state("Sweden", "SWE").
+state("Eswatini", "SWZ").
+state("Sint Maarten (Dutch part)", "SXM").
+state("Seychelles", "SYC").
+state("Syrian Arab Republic", "SYR").
+state("Turks and Caicos Islands", "TCA").
+state("Chad", "TCD").
+state("Togo", "TGO").
+state("Thailand", "THA").
+state("Tajikistan", "TJK").
+state("Tokelau", "TKL").
+state("Turkmenistan", "TKM").
+state("Timor-Leste", "TLS").
+state("Tonga", "TON").
+state("Trinidad and Tobago", "TTO").
+state("Tunisia", "TUN").
+state("Türkiye", "TUR").
+state("Tuvalu", "TUV").
+state("Taiwan, Province of China", "TWN").
+state("Tanzania, United Republic of", "TZA").
+state("Uganda", "UGA").
+state("Ukraine", "UKR").
+state("United States Minor Outlying Islands", "UMI").
+state("Uruguay", "URY").
+state("United States of America", "USA").
+state("Uzbekistan", "UZB").
+state("Holy See", "VAT").
+state("Saint Vincent and the Grenadines", "VCT").
+state("Venezuela (Bolivarian Republic of)", "VEN").
+state("Virgin Islands (British)", "VGB").
+state("Virgin Islands (U.S.)", "VIR").
+state("Viet Nam", "VNM").
+state("Vanuatu", "VUT").
+state("Wallis and Futuna", "WLF").
+state("Samoa", "WSM").
+state("Yemen", "YEM").
+state("South Africa", "ZAF").
+state("Zambia", "ZMB").
+state("Zimbabwe", "ZWE").
+
+schengen_state("AUT").
+schengen_state("BEL").
+schengen_state("CHE").
+schengen_state("CZE").
+schengen_state("DEU").
+schengen_state("DNK").
+schengen_state("ESP").
+schengen_state("EST").
+schengen_state("FIN").
+schengen_state("FRA").
+schengen_state("GRC").
+schengen_state("HRV").
+schengen_state("HUN").
+schengen_state("ISL").
+schengen_state("ITA").
+schengen_state("LIE").
+schengen_state("LTU").
+schengen_state("LUX").
+schengen_state("LVA").
+schengen_state("MLT").
+schengen_state("NLD").
+schengen_state("NOR").
+schengen_state("POL").
+schengen_state("PRT").
+schengen_state("SVK").
+schengen_state("SVN").
+schengen_state("SWE").
+
+eu_state("AUT").
+eu_state("BEL").
+eu_state("BGR").
+eu_state("CYP").
+eu_state("CZE").
+eu_state("DEU").
+eu_state("DNK").
+eu_state("ESP").
+eu_state("EST").
+eu_state("FIN").
+eu_state("FRA").
+eu_state("GRC").
+eu_state("HRV").
+eu_state("HUN").
+eu_state("IRL").
+eu_state("ITA").
+eu_state("LTU").
+eu_state("LUX").
+eu_state("LVA").
+eu_state("MLT").
+eu_state("NLD").
+eu_state("POL").
+eu_state("PRT").
+eu_state("ROU").
+eu_state("SVK").
+eu_state("SVN").
+eu_state("SWE").
+
+.decl to_reverse(x: symbol)
+
+to_reverse("Albania").
+to_reverse("Armenia").
+to_reverse("Azerbaijan").
+to_reverse("Belarus").
+to_reverse("Cuba").
+to_reverse("Georgia").
+to_reverse("Kazakhstan").
+to_reverse("Kyrgyzstan").
+to_reverse("Mexico").
+to_reverse("Moldova, Republic of").
+to_reverse("Nicaragua").
+to_reverse("Peru").
+to_reverse("Tajikistan").
+to_reverse("Timor-Leste").
+to_reverse("Turkmenistan").
+to_reverse("Ukraine").
+to_reverse("Uzbekistan").
+to_reverse("Venezuela (Bolivarian Republic of)").
+
+
+.decl reverse(x: symbol)
+.output reverse
+reverse(x) :-
+    to_reverse(e),
+    state(e, x).
+
+//reverse(e) :-
+//    to_reverse(e),
+//    !state(e, _).
