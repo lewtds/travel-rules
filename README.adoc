@@ -2,6 +2,8 @@
 
 Travel rules around the world as an executable Datalog database.
 
+**This project makes no claim to the accuracy of the data. The query results cannot be taken as legal advice.**
+
 The travel rules for each nation state (in the 3 letter ISO 3166-1 alpha-3 format) is specified in its own Datalog file in the `./state_rules` folder. Preferably each rule should have a referenced source that could be checked regularly for updates.
 
 An example session:
