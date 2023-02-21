@@ -3,5 +3,5 @@
 can_visit_state(p, "ATG", "eVisa", "?", "eVisa") :-
     person_holds_passport(p, "VNM", _).
 
-can_visit_state(p, "ATG", "has_schengen_visa", "30 days", "visa on arrival") :-
+can_visit_state(p, "ATG", "has Schengen visa", "30 days", "visa on arrival") :-
     person_holds_schengen_visa(p, _).

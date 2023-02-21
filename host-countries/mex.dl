@@ -1,4 +1,4 @@
 #include "../decl.dl"
 
-can_visit_state(p, "MEX", "has_schengen_visa", "180 days", "tourism, business, or transit purposes") :-
+can_visit_state(p, "MEX", "has Schengen visa", "180 days", "tourism, business, or transit purposes") :-
     person_holds_schengen_visa(p, _).

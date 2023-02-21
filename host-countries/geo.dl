@@ -1,5 +1,5 @@
 #include "../decl.dl"
 
 // TODO: However, if you are a national from Kosovo, Taiwan, and Palestine, you will be refused entry— you won’t even be allowed to transit unless you hold a residence visa from UAE.
-can_visit_state(p, "GEO", "has_schengen_visa", "90/180", "") :-
+can_visit_state(p, "GEO", "has Schengen visa", "90/180", "") :-
     person_holds_schengen_visa(p, _).

@@ -1,8 +1,8 @@
 #include "../decl.dl"
 
-can_visit_state(p, "MNE", "has_schengen_visa", "30 days", "") :-
+can_visit_state(p, "MNE", "has Schengen visa", "30 days", "") :-
     person_holds_schengen_visa(p, _).
 
-can_visit_state(p, "MNE", "has_schengen_visa", "10 days", "") :-
+can_visit_state(p, "MNE", "has Schengen visa", "10 days", "") :-
     person_holds_schengen_visa(p, _),
     person_holds_passport(p, "ARE", _).

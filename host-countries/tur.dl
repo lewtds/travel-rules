@@ -1,6 +1,6 @@
 #include "../decl.dl"
 
-can_visit_state(p, "TUR", "has_schengen_visa", "1 month", "eVisa") :-
+can_visit_state(p, "TUR", "has Schengen visa", "1 month", "eVisa") :-
     person_holds_schengen_visa(p, _).
 
 //Afghanistan	Ethiopia	Niger

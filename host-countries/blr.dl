@@ -1,6 +1,6 @@
 #include "../decl.dl"
 
-can_visit_state(p, "BLR", "has_schengen_visa", "30 days", "flight ticket to your home country that allows you to depart from the airports in Minsk, Brest, Vitebsk, Gomel, Grodno, and Mogilev") :-
+can_visit_state(p, "BLR", "has Schengen visa", "30 days", "flight ticket to your home country that allows you to depart from the airports in Minsk, Brest, Vitebsk, Gomel, Grodno, and Mogilev") :-
 	person_holds_schengen_visa(p, _),
 	(
 		person_holds_passport(p, "EGY", _);
