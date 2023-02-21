@@ -1,0 +1,12 @@
+#include "decl.dl"
+
+.decl person_holds_schengen_visa(person: Person, state: ISO3166_1_alpha_3)
+
+person_holds_schengen_visa(p, s) :-
+    person_holds_visa(p, s, _),
+    schengen_state(s).
+
+can_visit_state(p, s, "has_schengen_visa", "visa duration", "") :-
+    schengen_state(s),
+    person_holds_schengen_visa(p, another_schengen_state),
+    s != another_schengen_state.
