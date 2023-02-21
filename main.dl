@@ -15,4 +15,10 @@ can_visit_state(p, s, "has_schengen_visa", "visa duration", "") :-
 
 .input person_holds_passport
 .input person_holds_visa
-.output can_visit_state(headers=true)
+
+.decl can_visit_state_formatted(person: Person, state_name: symbol, basis: symbol, duration: symbol, conditions: symbol)
+.output can_visit_state_formatted(headers=true)
+
+can_visit_state_formatted(person, state_name, basis, duration, conditions) :-
+    can_visit_state(person, state_iso, basis, duration, conditions),
+    state_iso3_name(state_iso, state_name).

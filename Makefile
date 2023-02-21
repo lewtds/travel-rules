@@ -1,4 +1,4 @@
-output/can_visit_state.csv: main.dl facts/*
+output/can_visit_state_formatted.csv: main.dl facts/*
 	souffle -F ./facts -D ./output "$<"
 
 clean:

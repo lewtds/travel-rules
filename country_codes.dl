@@ -1,260 +1,262 @@
 #pragma once
+
+// TODO I'd want this to behave more like TypeScript's literal union type. eg: "ATF" | "AZE"
 .type ISO3166_1_alpha_3 <: symbol
-.decl state(name: symbol, iso: ISO3166_1_alpha_3)
+.decl state_iso3_name(iso: ISO3166_1_alpha_3, name: symbol)
 .decl eu_state(name: ISO3166_1_alpha_3)
 .decl schengen_state(iso: ISO3166_1_alpha_3)
 
-state("Aruba", "ABW").
-state("Afghanistan", "AFG").
-state("Angola", "AGO").
-state("Anguilla", "AIA").
-state("Åland Islands", "ALA").
-state("Albania", "ALB").
-state("Andorra", "AND").
-state("United Arab Emirates", "ARE").
-state("Argentina", "ARG").
-state("Armenia", "ARM").
-state("American Samoa", "ASM").
-state("Antarctica", "ATA").
-state("French Southern Territories", "ATF").
-state("Antigua and Barbuda", "ATG").
-state("Australia", "AUS").
-state("Austria", "AUT").
-state("Azerbaijan", "AZE").
-state("Burundi", "BDI").
-state("Belgium", "BEL").
-state("Benin", "BEN").
-state("Bonaire, Sint Eustatius and Saba", "BES").
-state("Burkina Faso", "BFA").
-state("Bangladesh", "BGD").
-state("Bulgaria", "BGR").
-state("Bahrain", "BHR").
-state("Bahamas", "BHS").
-state("Bosnia and Herzegovina", "BIH").
-state("Saint Barthélemy", "BLM").
-state("Belarus", "BLR").
-state("Belize", "BLZ").
-state("Bermuda", "BMU").
-state("Bolivia (Plurinational State of)", "BOL").
-state("Brazil", "BRA").
-state("Barbados", "BRB").
-state("Brunei Darussalam", "BRN").
-state("Bhutan", "BTN").
-state("Bouvet Island", "BVT").
-state("Botswana", "BWA").
-state("Central African Republic", "CAF").
-state("Canada", "CAN").
-state("Cocos (Keeling) Islands", "CCK").
-state("Switzerland", "CHE").
-state("Chile", "CHL").
-state("China", "CHN").
-state("Côte d'Ivoire", "CIV").
-state("Cameroon", "CMR").
-state("Congo, Democratic Republic of the", "COD").
-state("Congo", "COG").
-state("Cook Islands", "COK").
-state("Colombia", "COL").
-state("Comoros", "COM").
-state("Cabo Verde", "CPV").
-state("Costa Rica", "CRI").
-state("Cuba", "CUB").
-state("Curaçao", "CUW").
-state("Christmas Island", "CXR").
-state("Cayman Islands", "CYM").
-state("Cyprus", "CYP").
-state("Czech Republic", "CZE").
-state("Germany", "DEU").
-state("Djibouti", "DJI").
-state("Dominica", "DMA").
-state("Denmark", "DNK").
-state("Dominican Republic", "DOM").
-state("Algeria", "DZA").
-state("Ecuador", "ECU").
-state("Egypt", "EGY").
-state("Eritrea", "ERI").
-state("Western Sahara", "ESH").
-state("Spain", "ESP").
-state("Estonia", "EST").
-state("Ethiopia", "ETH").
-state("Finland", "FIN").
-state("Fiji", "FJI").
-state("Falkland Islands (Malvinas)", "FLK").
-state("France", "FRA").
-state("Faroe Islands", "FRO").
-state("Micronesia (Federated States of)", "FSM").
-state("Gabon", "GAB").
-state("United Kingdom of Great Britain and Northern Ireland", "GBR").
-state("Georgia", "GEO").
-state("Guernsey", "GGY").
-state("Ghana", "GHA").
+state_iso3_name("ABW", "Aruba").
+state_iso3_name("AFG", "Afghanistan").
+state_iso3_name("AGO", "Angola").
+state_iso3_name("AIA", "Anguilla").
+state_iso3_name("ALA", "Åland Islands").
+state_iso3_name("ALB", "Albania").
+state_iso3_name("AND", "Andorra").
+state_iso3_name("ARE", "United Arab Emirates").
+state_iso3_name("ARG", "Argentina").
+state_iso3_name("ARM", "Armenia").
+state_iso3_name("ASM", "American Samoa").
+state_iso3_name("ATA", "Antarctica").
+state_iso3_name("ATF", "French Southern Territories").
+state_iso3_name("ATG", "Antigua and Barbuda").
+state_iso3_name("AUS", "Australia").
+state_iso3_name("AUT", "Austria").
+state_iso3_name("AZE", "Azerbaijan").
+state_iso3_name("BDI", "Burundi").
+state_iso3_name("BEL", "Belgium").
+state_iso3_name("BEN", "Benin").
+state_iso3_name("BES", "Bonaire, Sint Eustatius and Saba").
+state_iso3_name("BFA", "Burkina Faso").
+state_iso3_name("BGD", "Bangladesh").
+state_iso3_name("BGR", "Bulgaria").
+state_iso3_name("BHR", "Bahrain").
+state_iso3_name("BHS", "Bahamas").
+state_iso3_name("BIH", "Bosnia and Herzegovina").
+state_iso3_name("BLM", "Saint Barthélemy").
+state_iso3_name("BLR", "Belarus").
+state_iso3_name("BLZ", "Belize").
+state_iso3_name("BMU", "Bermuda").
+state_iso3_name("BOL", "Bolivia (Plurinational State of)").
+state_iso3_name("BRA", "Brazil").
+state_iso3_name("BRB", "Barbados").
+state_iso3_name("BRN", "Brunei Darussalam").
+state_iso3_name("BTN", "Bhutan").
+state_iso3_name("BVT", "Bouvet Island").
+state_iso3_name("BWA", "Botswana").
+state_iso3_name("CAF", "Central African Republic").
+state_iso3_name("CAN", "Canada").
+state_iso3_name("CCK", "Cocos (Keeling) Islands").
+state_iso3_name("CHE", "Switzerland").
+state_iso3_name("CHL", "Chile").
+state_iso3_name("CHN", "China").
+state_iso3_name("CIV", "Côte d'Ivoire").
+state_iso3_name("CMR", "Cameroon").
+state_iso3_name("COD", "Congo, Democratic Republic of the").
+state_iso3_name("COG", "Congo").
+state_iso3_name("COK", "Cook Islands").
+state_iso3_name("COL", "Colombia").
+state_iso3_name("COM", "Comoros").
+state_iso3_name("CPV", "Cabo Verde").
+state_iso3_name("CRI", "Costa Rica").
+state_iso3_name("CUB", "Cuba").
+state_iso3_name("CUW", "Curaçao").
+state_iso3_name("CXR", "Christmas Island").
+state_iso3_name("CYM", "Cayman Islands").
+state_iso3_name("CYP", "Cyprus").
+state_iso3_name("CZE", "Czech Republic").
+state_iso3_name("DEU", "Germany").
+state_iso3_name("DJI", "Djibouti").
+state_iso3_name("DMA", "Dominica").
+state_iso3_name("DNK", "Denmark").
+state_iso3_name("DOM", "Dominican Republic").
+state_iso3_name("DZA", "Algeria").
+state_iso3_name("ECU", "Ecuador").
+state_iso3_name("EGY", "Egypt").
+state_iso3_name("ERI", "Eritrea").
+state_iso3_name("ESH", "Western Sahara").
+state_iso3_name("ESP", "Spain").
+state_iso3_name("EST", "Estonia").
+state_iso3_name("ETH", "Ethiopia").
+state_iso3_name("FIN", "Finland").
+state_iso3_name("FJI", "Fiji").
+state_iso3_name("FLK", "Falkland Islands (Malvinas)").
+state_iso3_name("FRA", "France").
+state_iso3_name("FRO", "Faroe Islands").
+state_iso3_name("FSM", "Micronesia (Federated States of)").
+state_iso3_name("GAB", "Gabon").
+state_iso3_name("GBR", "United Kingdom of Great Britain and Northern Ireland").
+state_iso3_name("GEO", "Georgia").
+state_iso3_name("GGY", "Guernsey").
+state_iso3_name("GHA", "Ghana").
 
-state("Gibraltar", "GIB").
-state("Guinea", "GIN").
-state("Guadeloupe", "GLP").
-state("Gambia", "GMB").
-state("Guinea-Bissau", "GNB").
-state("Equatorial Guinea", "GNQ").
-state("Greece", "GRC").
-state("Grenada", "GRD").
-state("Greenland", "GRL").
-state("Guatemala", "GTM").
-state("French Guiana", "GUF").
-state("Guam", "GUM").
-state("Guyana", "GUY").
-state("Hong Kong", "HKG").
-state("Heard Island and McDonald Islands", "HMD").
-state("Honduras", "HND").
-state("Croatia", "HRV").
-state("Haiti", "HTI").
-state("Hungary", "HUN").
-state("Indonesia", "IDN").
-state("Isle of Man", "IMN").
-state("India", "IND").
-state("British Indian Ocean Territory", "IOT").
-state("Ireland", "IRL").
-state("Iran (Islamic Republic of)", "IRN").
-state("Iraq", "IRQ").
-state("Iceland", "ISL").
-state("Israel", "ISR").
-state("Italy", "ITA").
-state("Jamaica", "JAM").
-state("Jersey", "JEY").
-state("Jordan", "JOR").
-state("Japan", "JPN").
-state("Kazakhstan", "KAZ").
-state("Kenya", "KEN").
-state("Kyrgyzstan", "KGZ").
-state("Cambodia", "KHM").
-state("Kiribati", "KIR").
-state("Saint Kitts and Nevis", "KNA").
-state("Korea, Republic of", "KOR").
-state("Kuwait", "KWT").
-state("Lao People's Democratic Republic", "LAO").
-state("Lebanon", "LBN").
-state("Liberia", "LBR").
-state("Libya", "LBY").
-state("Saint Lucia", "LCA").
-state("Liechtenstein", "LIE").
-state("Sri Lanka", "LKA").
-state("Lesotho", "LSO").
-state("Lithuania", "LTU").
-state("Luxembourg", "LUX").
-state("Latvia", "LVA").
-state("Macao", "MAC").
-state("Saint Martin (French part)", "MAF").
-state("Morocco", "MAR").
-state("Monaco", "MCO").
-state("Moldova, Republic of", "MDA").
-state("Madagascar", "MDG").
-state("Maldives", "MDV").
-state("Mexico", "MEX").
-state("Marshall Islands", "MHL").
-state("North Macedonia", "MKD").
-state("Mali", "MLI").
-state("Malta", "MLT").
-state("Myanmar", "MMR").
-state("Montenegro", "MNE").
-state("Mongolia", "MNG").
-state("Northern Mariana Islands", "MNP").
-state("Mozambique", "MOZ").
-state("Mauritania", "MRT").
-state("Montserrat", "MSR").
-state("Martinique", "MTQ").
-state("Mauritius", "MUS").
-state("Malawi", "MWI").
-state("Malaysia", "MYS").
-state("Mayotte", "MYT").
-state("Namibia", "NAM").
-state("New Caledonia", "NCL").
-state("Niger", "NER").
-state("Norfolk Island", "NFK").
-state("Nigeria", "NGA").
-state("Nicaragua", "NIC").
-state("Niue", "NIU").
-state("Netherlands", "NLD").
+state_iso3_name("GIB", "Gibraltar").
+state_iso3_name("GIN", "Guinea").
+state_iso3_name("GLP", "Guadeloupe").
+state_iso3_name("GMB", "Gambia").
+state_iso3_name("GNB", "Guinea-Bissau").
+state_iso3_name("GNQ", "Equatorial Guinea").
+state_iso3_name("GRC", "Greece").
+state_iso3_name("GRD", "Grenada").
+state_iso3_name("GRL", "Greenland").
+state_iso3_name("GTM", "Guatemala").
+state_iso3_name("GUF", "French Guiana").
+state_iso3_name("GUM", "Guam").
+state_iso3_name("GUY", "Guyana").
+state_iso3_name("HKG", "Hong Kong").
+state_iso3_name("HMD", "Heard Island and McDonald Islands").
+state_iso3_name("HND", "Honduras").
+state_iso3_name("HRV", "Croatia").
+state_iso3_name("HTI", "Haiti").
+state_iso3_name("HUN", "Hungary").
+state_iso3_name("IDN", "Indonesia").
+state_iso3_name("IMN", "Isle of Man").
+state_iso3_name("IND", "India").
+state_iso3_name("IOT", "British Indian Ocean Territory").
+state_iso3_name("IRL", "Ireland").
+state_iso3_name("IRN", "Iran (Islamic Republic of)").
+state_iso3_name("IRQ", "Iraq").
+state_iso3_name("ISL", "Iceland").
+state_iso3_name("ISR", "Israel").
+state_iso3_name("ITA", "Italy").
+state_iso3_name("JAM", "Jamaica").
+state_iso3_name("JEY", "Jersey").
+state_iso3_name("JOR", "Jordan").
+state_iso3_name("JPN", "Japan").
+state_iso3_name("KAZ", "Kazakhstan").
+state_iso3_name("KEN", "Kenya").
+state_iso3_name("KGZ", "Kyrgyzstan").
+state_iso3_name("KHM", "Cambodia").
+state_iso3_name("KIR", "Kiribati").
+state_iso3_name("KNA", "Saint Kitts and Nevis").
+state_iso3_name("KOR", "Korea, Republic of").
+state_iso3_name("KWT", "Kuwait").
+state_iso3_name("LAO", "Lao People's Democratic Republic").
+state_iso3_name("LBN", "Lebanon").
+state_iso3_name("LBR", "Liberia").
+state_iso3_name("LBY", "Libya").
+state_iso3_name("LCA", "Saint Lucia").
+state_iso3_name("LIE", "Liechtenstein").
+state_iso3_name("LKA", "Sri Lanka").
+state_iso3_name("LSO", "Lesotho").
+state_iso3_name("LTU", "Lithuania").
+state_iso3_name("LUX", "Luxembourg").
+state_iso3_name("LVA", "Latvia").
+state_iso3_name("MAC", "Macao").
+state_iso3_name("MAF", "Saint Martin (French part)").
+state_iso3_name("MAR", "Morocco").
+state_iso3_name("MCO", "Monaco").
+state_iso3_name("MDA", "Moldova, Republic of").
+state_iso3_name("MDG", "Madagascar").
+state_iso3_name("MDV", "Maldives").
+state_iso3_name("MEX", "Mexico").
+state_iso3_name("MHL", "Marshall Islands").
+state_iso3_name("MKD", "North Macedonia").
+state_iso3_name("MLI", "Mali").
+state_iso3_name("MLT", "Malta").
+state_iso3_name("MMR", "Myanmar").
+state_iso3_name("MNE", "Montenegro").
+state_iso3_name("MNG", "Mongolia").
+state_iso3_name("MNP", "Northern Mariana Islands").
+state_iso3_name("MOZ", "Mozambique").
+state_iso3_name("MRT", "Mauritania").
+state_iso3_name("MSR", "Montserrat").
+state_iso3_name("MTQ", "Martinique").
+state_iso3_name("MUS", "Mauritius").
+state_iso3_name("MWI", "Malawi").
+state_iso3_name("MYS", "Malaysia").
+state_iso3_name("MYT", "Mayotte").
+state_iso3_name("NAM", "Namibia").
+state_iso3_name("NCL", "New Caledonia").
+state_iso3_name("NER", "Niger").
+state_iso3_name("NFK", "Norfolk Island").
+state_iso3_name("NGA", "Nigeria").
+state_iso3_name("NIC", "Nicaragua").
+state_iso3_name("NIU", "Niue").
+state_iso3_name("NLD", "Netherlands").
 
-state("Norway", "NOR").
-state("Nepal", "NPL").
-state("Nauru", "NRU").
-state("New Zealand", "NZL").
-state("Oman", "OMN").
-state("Pakistan", "PAK").
-state("Panama", "PAN").
-state("Pitcairn", "PCN").
-state("Peru", "PER").
-state("Philippines", "PHL").
-state("Palau", "PLW").
-state("Papua New Guinea", "PNG").
-state("Poland", "POL").
-state("Puerto Rico", "PRI").
-state("Korea (Democratic People's Republic of)", "PRK").
-state("Portugal", "PRT").
-state("Paraguay", "PRY").
-state("Palestine, State of", "PSE").
-state("French Polynesia", "PYF").
-state("Qatar", "QAT").
-state("Réunion", "REU").
-state("Romania", "ROU").
-state("Russian Federation", "RUS").
-state("Rwanda", "RWA").
-state("Saudi Arabia", "SAU").
-state("Sudan", "SDN").
-state("Senegal", "SEN").
-state("Singapore", "SGP").
-state("South Georgia and the South Sandwich Islands", "SGS").
-state("Saint Helena, Ascension and Tristan da Cunha", "SHN").
-state("Svalbard and Jan Mayen", "SJM").
-state("Solomon Islands", "SLB").
-state("Sierra Leone", "SLE").
-state("El Salvador", "SLV").
-state("San Marino", "SMR").
-state("Somalia", "SOM").
-state("Saint Pierre and Miquelon", "SPM").
-state("Serbia", "SRB").
-state("South Sudan", "SSD").
-state("Sao Tome and Principe", "STP").
-state("Suriname", "SUR").
-state("Slovakia", "SVK").
-state("Slovenia", "SVN").
-state("Sweden", "SWE").
-state("Eswatini", "SWZ").
-state("Sint Maarten (Dutch part)", "SXM").
-state("Seychelles", "SYC").
-state("Syrian Arab Republic", "SYR").
-state("Turks and Caicos Islands", "TCA").
-state("Chad", "TCD").
-state("Togo", "TGO").
-state("Thailand", "THA").
-state("Tajikistan", "TJK").
-state("Tokelau", "TKL").
-state("Turkmenistan", "TKM").
-state("Timor-Leste", "TLS").
-state("Tonga", "TON").
-state("Trinidad and Tobago", "TTO").
-state("Tunisia", "TUN").
-state("Türkiye", "TUR").
-state("Tuvalu", "TUV").
-state("Taiwan, Province of China", "TWN").
-state("Tanzania, United Republic of", "TZA").
-state("Uganda", "UGA").
-state("Ukraine", "UKR").
-state("United States Minor Outlying Islands", "UMI").
-state("Uruguay", "URY").
-state("United States of America", "USA").
-state("Uzbekistan", "UZB").
-state("Holy See", "VAT").
-state("Saint Vincent and the Grenadines", "VCT").
-state("Venezuela (Bolivarian Republic of)", "VEN").
-state("Virgin Islands (British)", "VGB").
-state("Virgin Islands (U.S.)", "VIR").
-state("Viet Nam", "VNM").
-state("Vanuatu", "VUT").
-state("Wallis and Futuna", "WLF").
-state("Samoa", "WSM").
-state("Yemen", "YEM").
-state("South Africa", "ZAF").
-state("Zambia", "ZMB").
-state("Zimbabwe", "ZWE").
+state_iso3_name("NOR", "Norway").
+state_iso3_name("NPL", "Nepal").
+state_iso3_name("NRU", "Nauru").
+state_iso3_name("NZL", "New Zealand").
+state_iso3_name("OMN", "Oman").
+state_iso3_name("PAK", "Pakistan").
+state_iso3_name("PAN", "Panama").
+state_iso3_name("PCN", "Pitcairn").
+state_iso3_name("PER", "Peru").
+state_iso3_name("PHL", "Philippines").
+state_iso3_name("PLW", "Palau").
+state_iso3_name("PNG", "Papua New Guinea").
+state_iso3_name("POL", "Poland").
+state_iso3_name("PRI", "Puerto Rico").
+state_iso3_name("PRK", "Korea (Democratic People's Republic of)").
+state_iso3_name("PRT", "Portugal").
+state_iso3_name("PRY", "Paraguay").
+state_iso3_name("PSE", "Palestine, State of").
+state_iso3_name("PYF", "French Polynesia").
+state_iso3_name("QAT", "Qatar").
+state_iso3_name("REU", "Réunion").
+state_iso3_name("ROU", "Romania").
+state_iso3_name("RUS", "Russian Federation").
+state_iso3_name("RWA", "Rwanda").
+state_iso3_name("SAU", "Saudi Arabia").
+state_iso3_name("SDN", "Sudan").
+state_iso3_name("SEN", "Senegal").
+state_iso3_name("SGP", "Singapore").
+state_iso3_name("SGS", "South Georgia and the South Sandwich Islands").
+state_iso3_name("SHN", "Saint Helena, Ascension and Tristan da Cunha").
+state_iso3_name("SJM", "Svalbard and Jan Mayen").
+state_iso3_name("SLB", "Solomon Islands").
+state_iso3_name("SLE", "Sierra Leone").
+state_iso3_name("SLV", "El Salvador").
+state_iso3_name("SMR", "San Marino").
+state_iso3_name("SOM", "Somalia").
+state_iso3_name("SPM", "Saint Pierre and Miquelon").
+state_iso3_name("SRB", "Serbia").
+state_iso3_name("SSD", "South Sudan").
+state_iso3_name("STP", "Sao Tome and Principe").
+state_iso3_name("SUR", "Suriname").
+state_iso3_name("SVK", "Slovakia").
+state_iso3_name("SVN", "Slovenia").
+state_iso3_name("SWE", "Sweden").
+state_iso3_name("SWZ", "Eswatini").
+state_iso3_name("SXM", "Sint Maarten (Dutch part)").
+state_iso3_name("SYC", "Seychelles").
+state_iso3_name("SYR", "Syrian Arab Republic").
+state_iso3_name("TCA", "Turks and Caicos Islands").
+state_iso3_name("TCD", "Chad").
+state_iso3_name("TGO", "Togo").
+state_iso3_name("THA", "Thailand").
+state_iso3_name("TJK", "Tajikistan").
+state_iso3_name("TKL", "Tokelau").
+state_iso3_name("TKM", "Turkmenistan").
+state_iso3_name("TLS", "Timor-Leste").
+state_iso3_name("TON", "Tonga").
+state_iso3_name("TTO", "Trinidad and Tobago").
+state_iso3_name("TUN", "Tunisia").
+state_iso3_name("TUR", "Türkiye").
+state_iso3_name("TUV", "Tuvalu").
+state_iso3_name("TWN", "Taiwan, Province of China").
+state_iso3_name("TZA", "Tanzania, United Republic of").
+state_iso3_name("UGA", "Uganda").
+state_iso3_name("UKR", "Ukraine").
+state_iso3_name("UMI", "United States Minor Outlying Islands").
+state_iso3_name("URY", "Uruguay").
+state_iso3_name("USA", "United States of America").
+state_iso3_name("UZB", "Uzbekistan").
+state_iso3_name("VAT", "Holy See").
+state_iso3_name("VCT", "Saint Vincent and the Grenadines").
+state_iso3_name("VEN", "Venezuela (Bolivarian Republic of)").
+state_iso3_name("VGB", "Virgin Islands (British)").
+state_iso3_name("VIR", "Virgin Islands (U.S.)").
+state_iso3_name("VNM", "Viet Nam").
+state_iso3_name("VUT", "Vanuatu").
+state_iso3_name("WLF", "Wallis and Futuna").
+state_iso3_name("WSM", "Samoa").
+state_iso3_name("YEM", "Yemen").
+state_iso3_name("ZAF", "South Africa").
+state_iso3_name("ZMB", "Zambia").
+state_iso3_name("ZWE", "Zimbabwe").
 
 schengen_state("AUT").
 schengen_state("BEL").
